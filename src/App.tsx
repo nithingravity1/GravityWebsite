@@ -2,7 +2,10 @@ import { useState, useLayoutEffect, useRef } from 'react';
 import gsap from 'gsap';
 import Balatro from './components/Balatro';
 
+import ExperienceCard from './components/ExperienceCard';
 import logoGravity from './assets/logo-gravity.svg';
+
+
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -285,23 +288,23 @@ function App() {
             <h4 className="text-[#006BB4] font-semibold text-lg mb-8">Our experience</h4>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {/* Card 1 */}
-              <div className="p-10 rounded-xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-[#006BB4]/50 transition-all hover:bg-white/10 group h-full">
-                <div className="text-6xl font-bold text-white mb-4 group-hover:scale-105 transition-transform origin-left">1000+</div>
-                <div className="text-xl font-bold text-[#006BB4] mb-6">leaders and executives</div>
-                <p className="text-gray-400 text-lg">trust us to drive measurable success</p>
-              </div>
+              <ExperienceCard
+                number="1000+"
+                title="leaders and executives"
+                description="trust us to drive measurable success"
+              />
               {/* Card 2 */}
-              <div className="p-10 rounded-xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-[#006BB4]/50 transition-all hover:bg-white/10 group h-full">
-                <div className="text-6xl font-bold text-white mb-4 group-hover:scale-105 transition-transform origin-left">120+</div>
-                <div className="text-xl font-bold text-[#006BB4] mb-6">large enterprises</div>
-                <p className="text-gray-400 text-lg">partnered with to achieve strategic success</p>
-              </div>
+              <ExperienceCard
+                number="120+"
+                title="large enterprises"
+                description="partnered with to achieve strategic success"
+              />
               {/* Card 3 */}
-              <div className="p-10 rounded-xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-[#006BB4]/50 transition-all hover:bg-white/10 group h-full">
-                <div className="text-6xl font-bold text-white mb-4 group-hover:scale-105 transition-transform origin-left">150+</div>
-                <div className="text-xl font-bold text-[#006BB4] mb-6">proven scenarios</div>
-                <p className="text-gray-400 text-lg">making it the richest such library globally</p>
-              </div>
+              <ExperienceCard
+                number="150+"
+                title="proven scenarios"
+                description="making it the richest such library globally"
+              />
             </div>
           </div>
         </div>
